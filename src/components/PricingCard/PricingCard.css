@@ -72,3 +72,53 @@
     margin-right: 10px;
     font-weight: 400;
 }
+
+.card-pro {
+    position: relative;
+    background-color: #e8f0fc;
+}
+
+.card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e3a8a;
+    letter-spacing: 0.03em;
+}
+
+.card-pro .card-title {
+    color: #1e293b;
+}
+
+.card-pro .card-price,
+.card-pro .card-price-amount,
+.card-pro .card-price-period {
+    color: rgba(30, 41, 59, 0.65);
+}
+
+.card-pro .includes-text {
+    color: rgba(30, 41, 59, 0.65);
+}
+
+.card-pro .features-list li {
+    color: #1e293b;
+}
+
+.card-pro .checkmark {
+    color: #1e40af;
+}
+
+.card-pro .download-button.primary {
+    background-color: #1e40af;
+    color: #fff;
+}
+
+.card-pro .download-button.primary:hover {
+    background-color: #1e3a8a;
+}
+
+.card-pro .download-button.primary:active {
+    background-color: #1e3a8a;
+}

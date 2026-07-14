@@ -32,6 +32,7 @@ function Pricing() {
         ],
         buttonText: 'Get Pro',
         buttonVariant: 'primary',
+        featured: true,
     };
 
     return (

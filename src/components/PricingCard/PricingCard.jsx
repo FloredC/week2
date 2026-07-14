@@ -14,9 +14,10 @@
 import Button from '../Button/Button';
 import './PricingCard.css';
 
-function PricingCard({ title, priceAmount, pricePeriod, includesText, features, buttonText, buttonVariant }) {
+function PricingCard({ title, priceAmount, pricePeriod, includesText, features, buttonText, buttonVariant, featured = false }) {
     return (
-        <div className="card">
+        <div className={`card${featured ? ' card-pro' : ''}`}>
+            {featured && <span className="card-badge">Favourite pick</span>}
             <div className="card-top">
                 <h3 className="card-title">{title}</h3>
                 <p className="card-price">

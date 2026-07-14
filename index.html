@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- PAGE SETUP — browser settings, fonts, and styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Inter font — loaded from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Our stylesheet — all visual styling lives in styles.css -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- DEV LABEL — fixed badge at top of page (not part of the pricing UI) -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- CARDS ROW — horizontal layout that holds all pricing cards -->
     <div class="cards-container">
+
+        <!-- HOBBY CARD — default/neutral styling -->
         <div class="card">
+
+            <!-- CARD TOP — groups title, price, and features above the button -->
             <div class="card-top">
+
+                <!-- Plan name -->
                 <h3 class="card-title">Hobby</h3>
+
+                <!-- Price row — amount + optional period -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+
+                <!-- Feature list block -->
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
                     <ul class="features-list">
@@ -36,15 +55,25 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- CTA button — "secondary" = light grey pill -->
             <button class="download-button secondary">Download</button>
         </div>
-        <div class="card">
+
+        <!-- PRO CARD — highlighted with .card-pro modifier class -->
+        <div class="card card-pro">
+
+            <!-- Badge — positioned top-right via CSS, does not push content down -->
+            <span class="card-badge">Favourite pick</span>
+
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
+
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
                     <ul class="features-list">
@@ -67,8 +96,11 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- CTA button — "primary" = dark filled pill -->
             <button class="download-button primary">Get Pro</button>
         </div>
+
     </div>
 </body>
 </html>

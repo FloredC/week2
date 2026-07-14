@@ -24,10 +24,11 @@
 
         // Same card UI, written as a JSX component (HTML-like syntax inside JavaScript)
         // This component is reusable - we can create multiple cards by passing different data
-        function PricingCard({ title, price, includesText, features, buttonText, buttonVariant }) {
+        function PricingCard({ title, price, includesText, features, buttonText, buttonVariant, featured = false }) {
             return (
                 // JSX uses "className" instead of "class" because "class" is a reserved word in JavaScript
-                <div className="card">
+                <div className={`card${featured ? ' card-pro' : ''}`}>
+                    {featured && <span className="card-badge">Favourite pick</span>}
                     {/* Curly braces { } let you insert JavaScript expressions into JSX */}
                     <h1 className="card-title">{title}</h1>
                     <p className="card-price">{price}</p>
@@ -73,8 +74,21 @@
                 ],
                 buttonText: 'Get Pro',
                 buttonVariant: 'primary',
+                featured: true,
             };
-
+            const enterprisePlan = {
+                title: 'Enterprise',
+                price: '$100/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: [
+                    'Unlimited Agent requests',
+                    'Unlimited Tab completions',
+                    'Background Agents',
+                    'Maximum context windows',
+                ],
+                buttonText: 'Get Enterprise',
+                buttonVariant: 'primary',
+            };
             return (
                 // <> is a React Fragment - it groups elements without adding extra HTML divs
                 <>
@@ -84,6 +98,7 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...enterprisePlan} />
                     </div>
                 </>
             );
