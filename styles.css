@@ -173,70 +173,20 @@ body {
     background-color: #333;
 }
 
-
-/* ==========================================================================
-   PRO CARD — FEATURED VARIANT
-   Light blue background with dark blue accents
-   Add .card-pro alongside .card to apply this theme
-   ========================================================================== */
-
-.card-pro {
-    position: relative; /* anchor for the badge */
-    background-color: #e8f0fc; /* light blue */
+.download-button.tertiary {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #d4d2d2;
 }
 
-.card-badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #1e3a8a; /* dark blue label */
-    letter-spacing: 0.03em;
+.download-button.tertiary:hover {
+    background-color: #c2c1c1;
+    color: #333;
 }
 
-/* Override base card colours inside the Pro card */
-.card-pro .card-title {
-    color: #1e293b;
+.download-button.tertiary:active {
+    background-color: #333;
 }
-
-.card-pro .card-price,
-.card-pro .card-price-amount,
-.card-pro .card-price-period {
-    color: rgba(30, 41, 59, 0.65);
-}
-
-.card-pro .includes-text {
-    color: rgba(30, 41, 59, 0.65);
-}
-
-.card-pro .features-list li {
-    color: #1e293b;
-}
-
-.card-pro .checkmark {
-    color: #1e40af;
-}
-
-.card-pro .download-button.primary {
-    background-color: #1e40af;
-    color: #fff;
-}
-
-.card-pro .download-button.primary:hover {
-    background-color: #1e3a8a;
-}
-
-.card-pro .download-button.primary:active {
-    background-color: #1e3a8a;
-}
-
-
-/* ==========================================================================
-   DEV LABEL
-   Fixed badge shown during the course — not part of the product UI
-   ========================================================================== */
-
 .page-label {
     position: fixed;
     top: 16px;
