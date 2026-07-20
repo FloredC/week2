@@ -180,12 +180,12 @@ body {
 }
 
 .download-button.tertiary:hover {
-    background-color: #c2c1c1;
+    background-color: #dbdbd7;
     color: #333;
 }
 
 .download-button.tertiary:active {
-    background-color: #333;
+    background-color: #dbdbd7;
 }
 .page-label {
     position: fixed;
